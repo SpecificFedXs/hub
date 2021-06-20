@@ -1,0 +1,73 @@
+if game.PlaceId == 417267366 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Dollhouse Roleplay", "Serpent")
+    local Tab = Window:NewTab("Main")
+    local Section = Tab:NewSection("Admin Scripts")
+    Section:NewButton("Fate Admin", "Gives an OP FE Admin Script", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+    end)
+    Section:NewButton("Inifnite Yield", "Gives you an Infinite yield FE Script", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end)
+    Section:NewButton("CMD-X", "An OP FE Admin Script . . . [CMD-X]", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+    end)
+    local Tab = Window:NewTab("Player")
+    Section:UpdateSection("Player Misc")
+    Section:NewButton("Fly", "Makes you Fly -- E to Unfly and Unfly", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/7rXZ9VNc", true))()
+    end)
+    Section:NewSlider("SliderText", "SliderInfo", 250, 15, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+    Section:NewSlider("SliderText", "SliderInfo", 350, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+end
+elseif game.PlaceId == 2788229376 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Da Hood Hub | Made By Fed ;)", "GrapeTheme")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Scripts")
+Section:NewButton("Legacy Hub", "Executes Legacy Hub | Da Hood GUI", function()
+    repeat
+		wait();
+	until game:IsLoaded();
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Legacy-Foundation/Legacy-Hub/main/.lua'))();
+end)
+Section:NewButton("SwagMode", "Executes SwagMode OP Da Hood GUI", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))() 
+end)
+Section:NewButton("Krypt", "Da Hood Script [Good UI]", function()
+    repeat
+		wait()
+	until game:IsLoaded()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/0nly6Ex/krypt/main/loader"))()
+end)
+local Tab = Window:NewTab("Misc")
+local Section = Tab:NewSection("Da Hood Misc")
+Section:NewButton("Animation Changer", "Gives an Animation Changer GUI", function()
+    teclaopen = "M" ---Cambia la tecla, por la que gustes para cerrar la GUI
+
+	loadstring(game:HttpGet("https://god-x.000webhostapp.com/linkAnimatorEdit.lua", true))()
+end)
+Section:NewButton("ShazamFly", "Gives you Admin Fly Tool. :flushed:", function()
+    -- Da Hood Shazam Fly made by Raycodex#9595
+
+	--// Settings
+	_G.ShazamFlySpeed = 2
+
+	--// Script
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/DaHoodShazamFly"), true))()
+end)
+local Tab = Window:NewTab("RayCodex")
+local Section = Tab:NewSection("RayCodex Script")
+Section:NewButton("Execute", "Executes Raycodex ", function()
+    loadstring(game:GetObjects("rbxassetid://5812737894")[1].Source)()
+end)
+local Tab = Window:NewTab("Settings")
+local Section = Tab:NewSection("Settings")
+Section:NewKeybind("Toggle UI On/Off", "Toggle On/Off", Enum.KeyCode.F5, function()
+	Library:ToggleUI()
+end)
+end
